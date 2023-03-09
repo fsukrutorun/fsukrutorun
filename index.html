@@ -113,7 +113,32 @@ I am interested in algorithm development, parallel and distributed programming, 
 	
 <div id="publications" style="display:block">
 <table>
-
+<tr>
+      <td>
+        <h1>Partitioning and Reordering for Spike-Based Distributed-Memory Parallel Gauss-Seidel
+</h1>
+        <p><h3b><i>Tugba Torun, F. Sukru Torun, Murat Manguoglu, and Cevdet Aykanat</i> </h3b>
+          <br/><h3c>SIAM Journal on Scientific Computing, Volume 44, Issue 2, April 2022, 
+<a href="https://epubs.siam.org/doi/abs/10.1137/21M1411603">https://epubs.siam.org/doi/abs/10.1137/21M1411603</a> <br/></h3c>
+		
+        </p>	
+        <div id="gauss">       
+Gauss--Seidel (GS) is a widely used iterative method for solving sparse linear sys-tems of equations and also known to be effective as a smoother in algebraic multigrid methods.Parallelization of GS is a challenging task since solving the sparse lower triangular system in GSconstitutes a sequential bottleneck at each iteration.  
+We propose a distributed-memory parallel GS(dmpGS) by implementing a parallel sparse triangular solver (stSpike) based on the Spike algorithm.
+<a onclick="return toggleMe('gaus')">More</a>
+<div id="gaus" style="display:none">					
+stSpike decouples the global triangular system into smaller systems that can be solved concurrentlyand requires the solution of a much smaller reduced sparse lower triangular system which constitutesa sequential bottleneck. In order to alleviate this bottleneck and to reduce the communication over-head of dmpGS, we propose a partitioning and reordering model consisting of two phases. The firstphase is a novel hypergraph partitioning model whose partitioning objective simultaneously encodesminimizing the reduced system size and the communication volume. The second phase is an in-blockrow reordering method for decreasing the nonzero count of the reduced system. 
+Extensive experiments on a dataset consisting of 359 sparse linear systems verify the effectiveness of the proposedpartitioning and reordering model in terms of reducing the communication and the sequential com-putational overheads. Parallel experiments on 12 large systems using up to 320 cores demonstratethat the proposed model significantly improves the scalability of dmpGS.
+ </div>
+ <br>               
+        <br/>
+        <p></p>
+        </div>  
+    </td>
+    <td><img src="gauss1.png" alt="Gauss-seidel" style="float:left; margin-bottom:10px" width="250"/>    
+    </td>
+  </tr>
+	
 <tr>
       <td>
         <h1>Improving the scalability of the ABCD Solver with a combination of new load balancing and communication minimization techniques
