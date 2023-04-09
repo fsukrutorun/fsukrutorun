@@ -113,6 +113,39 @@ I am interested in algorithm development, parallel and distributed programming, 
 	
 <div id="publications" style="display:block">
 <table>
+	
+	
+
+	
+<tr>
+      <td>
+        <h1>Enhancing Block Cimmino for Sparse Linear Systems with Dense Columns via Schur Complement
+</h1>
+        <p><h3b><i>F. Sukru Torun, Murat Manguoglu, and Cevdet Aykanat</i> </h3b>
+          <br/><h3c>SIAM Journal on Scientific Computing, Volume 45, Issue 2, April 2023, 
+<a href="https://epubs.siam.org/doi/abs/10.1137/21M1453475">https://epubs.siam.org/doi/abs/10.1137/21M1453475</a> <br/></h3c>
+		
+        </p>	
+        <div id="schur">       
+The block Cimmino is a parallel hybrid row-block projection iterative method successfully used for solving general sparse linear systems. 
+However, the convergence of the method degrades when angles between subspaces spanned by the row-blocks are far from being orthogonal. 
+The density of columns as well as the numerical values of their nonzeros are more likely to contribute to the nonorthogonality between row-blocks. 
+We propose a novel scheme to handle such “dense” columns. The proposed scheme forms a reduced system by separating these columns and the respective rows from the original coefficient matrix and handling them via the Schur complement. 
+<a onclick="return toggleMe('scur1')">More</a>
+<div id="schur1" style="display:none">	
+Then the angles between subspaces spanned by the row-blocks of the reduced system are expected to be closer to orthogonal, and the reduced system is solved efficiently by the block conjugate gradient (CG) accelerated block Cimmino in fewer iterations. We also propose a novel metric for selecting “dense” columns considering the numerical values. The proposed metric establishes an upper bound on the sum of inner products between row-blocks. Then we propose an efficient algorithm for computing the proposed metric for the columns. 
+Extensive numerical experiments for a wide range of linear systems confirm the effectiveness of the proposed scheme by achieving fewer iterations and faster parallel solution time compared to the classical CG accelerated block Cimmino algorithm.	
+ </div>
+ <br>               
+        <br/>
+        <p></p>
+        </div>  
+    </td>
+    <td><img src="schur.png" alt="Schur Complement Block Cimmino" style="float:left; margin-bottom:10px" width="250"/>    
+    </td>
+  </tr>
+	
+	
 <tr>
       <td>
         <h1>Partitioning and Reordering for Spike-Based Distributed-Memory Parallel Gauss-Seidel
