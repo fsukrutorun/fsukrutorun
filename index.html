@@ -118,7 +118,7 @@ I am interested in algorithm development, parallel and distributed programming, 
 
 	<tr>
       <td>
-        <h1> Row Replicated Cimmino  </h1>
+        <h1> Row Replicated Block Cimmino  </h1>
         <p><h3b><i>  Iain Duff, Philippe Leleux, Daniel Ruiz, F. Sukru Torun  </i> </h3b>
           <br/><h3c>SIAM Journal on Scientific Computing, Volume 45, Issue 4, July 2023, 
 <a href="https://epubs.siam.org/doi/abs/10.1137/22M1487710"> https://epubs.siam.org/doi/abs/10.1137/22M1487710 </a> <br/></h3c>
@@ -157,6 +157,38 @@ methods. </div>
     </td>
   </tr>
 
+
+
+		<tr>
+      <td>
+        <h1> Quadratic programming based partitioning for Block Cimmino with correct value representation  </h1>
+        <p><h3b><i>  Zuhal Tas, F. Sukru Torun  </i> </h3b>
+          <br/><h3c> Turkish Journal of Electrical Engineering and Computer Sciences, Volume 31, Issue 3, May 2023, 
+<a href="https://journals.tubitak.gov.tr/elektrik/vol31/iss3/8/"> https://journals.tubitak.gov.tr/elektrik/vol31/iss3/8/ </a> <br/></h3c>
+		
+        </p>	
+        <div id="quadratic">       
+The block Cimmino method is successfully used for the parallel solution of large linear systems of equations due to its amenability to parallel processing. 
+ Since the convergence rate of block Cimmino depends on the orthogonality between the row blocks, advanced partitioning methods are used for faster convergence. 
+ In this work, we propose a new partitioning method that is superior to the state-of-the-art partitioning method, GRIP, in several ways. 
+ Firstly, our proposed method exploits the Mongoose partitioning library which can outperform the state-of-the-art methods by combining the advantages of classical combinatoric methods and continuous quadratic programming formulations. 
+<a onclick="return toggleMe('quadratic1')">More</a>
+<div id="quadratic1" style="display:none">	
+Secondly, the proposed method works on the numerical values in a floating-point format directly without converting them to integer format as in GRIP. 
+This brings an additional advantage of obtaining higher quality partitionings via better representation of numerical values. 
+Furthermore, the preprocessing time is also improved since there is no overhead in converting numerical values to integer format. 
+Finally, we extend the Mongoose library, which originally partitions graphs into only two parts, by using the recursive bisection paradigm to partition graphs into more than two parts. Extensive experiments conducted on both shared and distributed memory architectures demonstrate the effectiveness of the proposed method for solving different types of real-world problems. 		
+ </div>
+ <br>               
+        <br/>
+        <p></p>
+        </div>  
+    </td>
+    <td><img src="quadratic1.png" alt="Mongoose Partitioning" style="float:left; margin-bottom:10px" width="250"/>    
+    </td>
+  </tr>
+
+	
 	
 <tr>
       <td>
