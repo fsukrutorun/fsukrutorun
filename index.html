@@ -114,7 +114,48 @@ I am interested in algorithm development, parallel and distributed programming, 
 <div id="publications" style="display:block">
 <table>
 	
-	
+
+
+	<tr>
+      <td>
+        <h1> Row Replicated Cimmino  </h1>
+        <p><h3b><i>  Iain Duff, Philippe Leleux, Daniel Ruiz, F. Sukru Torun  </i> </h3b>
+          <br/><h3c>SIAM Journal on Scientific Computing, Volume 45, Issue 4, July 2023, 
+<a href="https://epubs.siam.org/doi/abs/10.1137/22M1487710"> https://epubs.siam.org/doi/abs/10.1137/22M1487710 </a> <br/></h3c>
+		
+        </p>	
+        <div id="replicated">       
+We study a new technique for reducing the number of iterations of the block Cimmino
+method by replicating rows in the partitioned system, so that we obtain a nondisjoint partitioning
+of the rows. Since rows in different partitions that are close to colinear produce a poorly conditioned
+iteration matrix for the block Cimmino method, row replication can get around this problem. With
+intelligent replication choices, we can reduce the number of iterations for convergence of the replicated
+block Cimmino method. The downside is a slight increase of the computational workload associated
+with each partition. 		
+<a onclick="return toggleMe('replicated1')">More</a>
+<div id="replicated1" style="display:none">	
+In order to find a trade-off between a lower number of iterations and a higher
+cost per iteration, selecting the proper set of rows for replication is crucial. In this paper, we use
+graph-based techniques to find good candidates for replication. Since the block Cimmino method
+can be interpreted as a nonoverlapping additive Schwartz method applied to the normal equations,
+the replication techniques correspond to introducing an overlap between the subdomains defined by
+the partitions. We show analytically in the case of a two-block partitioning how the replication
+improves the condition number of the block Cimmino iteration matrix. We then use challenging
+two-dimensional PDE problems to show that our algebraic approach targets physically meaningful
+phenomena on the interface between partitions. We demonstrate the efficiency of the proposed
+method in improving the performance of the block Cimmino solver, even with a small amount of
+replication, on problems from the SuiteSparse Matrix Collection. Finally, we compare our approach
+to a BiCGStab preconditioned with an additive Schwartz method and show that our replication
+technique can be used to define the subdomains and overlaps in the context of domain decomposition
+methods. </div>
+ <br>               
+        <br/>
+        <p></p>
+        </div>  
+    </td>
+    <td><img src="replicated1.png" alt="Replicated Partitioning" style="float:left; margin-bottom:10px" width="250"/>    
+    </td>
+  </tr>
 
 	
 <tr>
@@ -252,8 +293,7 @@ of the ABCD Solver on a distributed memory architecture by solving
 several problems from the SuiteSparse Matrix Collection.
  </div>
  <br>
- <br>
- 		  <a href="https://www.conftool.org/parco2019/sessions.php">Conference Program</a>
+ 		  <a href="https://dblp.org/db/conf/parco/parco2019.html">Conference Program</a>
 		  <br/>        
          
         <br/>
