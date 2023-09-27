@@ -131,12 +131,12 @@ of the rows. Since rows in different partitions that are close to colinear produ
 iteration matrix for the block Cimmino method, row replication can get around this problem. With
 intelligent replication choices, we can reduce the number of iterations for convergence of the replicated
 block Cimmino method. The downside is a slight increase of the computational workload associated
-with each partition. 		
+with each partition. 	In order to find a trade-off between a lower number of iterations and a higher
+cost per iteration, selecting the proper set of rows for replication is crucial. In this paper, we use
+graph-based techniques to find good candidates for replication.	
 <a onclick="return toggleMe('replicated1')">More</a>
 <div id="replicated1" style="display:none">	
-In order to find a trade-off between a lower number of iterations and a higher
-cost per iteration, selecting the proper set of rows for replication is crucial. In this paper, we use
-graph-based techniques to find good candidates for replication. Since the block Cimmino method
+ Since the block Cimmino method
 can be interpreted as a nonoverlapping additive Schwartz method applied to the normal equations,
 the replication techniques correspond to introducing an overlap between the subdomains defined by
 the partitions. We show analytically in the case of a two-block partitioning how the replication
@@ -171,9 +171,9 @@ methods. </div>
 The block Cimmino method is successfully used for the parallel solution of large linear systems of equations due to its amenability to parallel processing. 
  Since the convergence rate of block Cimmino depends on the orthogonality between the row blocks, advanced partitioning methods are used for faster convergence. 
  In this work, we propose a new partitioning method that is superior to the state-of-the-art partitioning method, GRIP, in several ways. 
- Firstly, our proposed method exploits the Mongoose partitioning library which can outperform the state-of-the-art methods by combining the advantages of classical combinatoric methods and continuous quadratic programming formulations. 
 <a onclick="return toggleMe('quadratic1')">More</a>
 <div id="quadratic1" style="display:none">	
+	 Firstly, our proposed method exploits the Mongoose partitioning library which can outperform the state-of-the-art methods by combining the advantages of classical combinatoric methods and continuous quadratic programming formulations. 
 Secondly, the proposed method works on the numerical values in a floating-point format directly without converting them to integer format as in GRIP. 
 This brings an additional advantage of obtaining higher quality partitionings via better representation of numerical values. 
 Furthermore, the preprocessing time is also improved since there is no overhead in converting numerical values to integer format. 
