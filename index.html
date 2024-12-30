@@ -113,7 +113,39 @@ I am interested in algorithm development, parallel and distributed programming, 
 	
 <div id="publications" style="display:block">
 <table>
-	
+	<tr>
+      <td>
+        <h1> A distributed memory parallel randomized Kaczmarz for sparse system of equations </h1>
+        <p><h3b><i> Ercan Bölükbaşı, F. Sukru Torun, Murat Manguoğlu </i> </h3b>
+          <br/><h3c>Concurrency and Computation: Practice and Experience, 2024, 
+<a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.8274"> https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.8274 </a> <br/></h3c>
+		
+        </p>	
+        <div id="kaczmar">     
+	Kaczmarz algorithm is an iterative projection method for solving system of linear equations that arise in science and engineering problems in various application
+domains. In addition to classical Kaczmarz, there are randomized and parallel variants.
+The main challenge of the parallel implementation is the dependency of each Kaczmarz
+iteration on its predecessor. Because of this dependency, frequent communication is
+required which results in a substantial overhead. In this study, a new distributed parallel method that reduces the communication overhead is proposed. The proposed
+method partitions the problem so that the Kaczmarz iterations on different blocks are
+less dependent. 
+		<a onclick="return toggleMe('kaczmarz1')">More</a>
+<div id="kaczmarz1" style="display:none">	
+	A frequency parameter is introduced to see the effect of communication frequency on the performance. The communication overhead is also decreased
+by allowing communication between processes only if they have shared non-zero
+columns. The experiments are performed using problems from various domains to
+compare the effects of different partitioning methods on the communication overhead
+and performance. Finally, parallel speedups of the proposedmethod on larger problems
+are presented.
+	</div>
+ <br>               
+        <br/>
+        <p></p>
+        </div>  
+    </td>
+    <td><img src="kaczmarz.png" alt="Parallel Kaczmarz" style="float:left; margin-bottom:10px" width="250"/>    
+    </td>
+  </tr>
 
 
 	<tr>
